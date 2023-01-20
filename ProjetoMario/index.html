@@ -5,20 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./src/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Poppins:wght@100;300;400;500&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/css/reset.css">
     <link rel="stylesheet" href="./src/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./src/css/responsive.css">
+    <title>Super Mario Bross</title>
 </head>
 <body>
+    <div class="backgroundVideo">
         <video src="./src/video/video-mario.mp4" class="video" autoplay loop muted>
         </video>
+    </div>
     <header class="cabecalho">
         <a href="">
             <img class="logo" src="./src/images/logo-chapeu-mario.png" alt="Logo do jogo Mario Bross">
         </a>
         <nav class="menu">
             <ul>
-                <li>Home</li>
-                <li>Detalhes</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Detalhes</a></li>
             </ul>
         </nav>
     </header>
@@ -29,6 +38,12 @@
             <button class="btnTrailer">Veja o Trailer</button>
         </div>
         <img class="mario" src="./src/images/super-mario-chars.png" alt="Imagem contendo os principais personagens do jogo.">
+        <div class="modal">
+            <div class="contentModal">
+                <span class="closedModal">X</span>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/cDNkh5WybZo" title="Super Mario Bross - Trailer Oficial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
     </main>
 </body>
 </html>

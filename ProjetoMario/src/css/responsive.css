@@ -1,0 +1,53 @@
+@media(max-width: 576px) {
+    .container .mario {
+        width: 70vw;
+        margin: 2rem auto;
+    }
+}
+
+@media(max-width: 767px) {
+    * {
+        font-size: 12px;
+    }
+    body {
+        background-color: #F44336;
+    }
+    .backgroundVideo  {
+        display: none;
+    }
+
+    .container {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .container .mario{
+        margin: 0 auto;
+        width: 40vw;
+    }
+
+    .container .informacoes {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container .informacoes .imageTitle {
+        width: 21.5rem;
+    }
+
+    .container .informacoes .description {
+        text-align: center;
+    }
+
+    .container .informacoes .btnTrailer {
+        color: #F44336;
+        margin: 0 auto 1rem;
+        background-color: white;
+    }
+
+    .modal #video {
+        width: 90vw;
+        height: 50.625vw;
+    }
+}

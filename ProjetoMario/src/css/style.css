@@ -1,16 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
     font-family: 'Poppins', sans-serif;
 }
 
-.video {
+.backgroundVideo {
     width: 100vw;
     height: 100vh;
 
+    z-index: -1;
+    position: absolute;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundVideo video {
+    height: 100vh;
+}
+
+.backgroundVideo::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    position: absolute;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    max-width: 1280px;
+}
+
+.cabecalho .logo {
+    width: 4rem;
+}
+
+.cabecalho .menu ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .menu ul li a {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.5rem 1.25rem;
+
+    transition: 0.2s;
+    border-radius: 3rem;
+}
+
+.cabecalho .menu ul li a:hover {
+    background-color: #D5011d;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1280px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 2rem 2rem;
+    height: calc(100vh - 105px);
+}
+
+.container .imageTitle {
+    max-width: 32rem;
+}
+
+.container .description {
+    width: 85%;
+    color: #A8adb7;
+
+    margin: 2rem 0;
+
+    font-size: 1.125rem;
+}
+
+.container .btnTrailer {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    background-color: #FF0021;
+    transition: 0.5s all ease-in-out;
+}
+
+.container .btnTrailer:hover {
+    transform: scale(1.1);
+}
+
+.modal {
+    top: 0;
+    left: 0;
     position: fixed;
-    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(50,50,50 0.5);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+}
+
+.modal .contentModal {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .contentModal .closedModal {
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    padding: 0rem 1rem;
+    border-radius: 0.5rem;
+    background-color: #F03A17;
+
+    width: 3rem;
+}
+
+.modal .contentModal iframe {
+    width: 40rem;
+    height: 22.5rem;
+    border-width: 0;
+}
+
+.modal.opened {
+    visibility: visible;
 }
